@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'text.dart';
 
 void main() {
   return runApp(
@@ -16,57 +17,49 @@ void main() {
 }
 
 class DicePage extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
-    return Row(
+    var leftDiceNum = 1;
+    return Center(
+    child: Row(
       children: <Widget>[
         
         Expanded(
-          flex: 3,
           child: 
-          Image.asset('images/dice1.png'),
-            
-        ),
-        Expanded(
-          flex: 1,
-          child: SizedBox(
-            
+             TextButton(
+              onPressed: (){
+              print('Test');
+                leftDiceNum = SwitchDice();
+                // String a;
+                // this.key. Image.asset('images/dice1.png');
+              } ,
+              child:
+              Image.asset(
+              
+            'images/dice$leftDiceNum.png',
+              ),
+            ),
             
           ),
-          ),
-        Expanded(
-          flex: 3,
-          child: Image.asset('images/dice4.png'),
-          
-          ),
           
           
-        // Text(
-        //   'JJ',
-        //   style: 
-        //   TextStyle(
-        //     fontSize: 20,
-        //     color: Colors.white,
-        //   ),
-        // ),
-        // Card(
-          
-        //   color: Colors.white,
-        //   child: Row(
-        //     children: <Widget>[
-        //       Text(
-                
-        //         'JJ',
-        //       style: TextStyle(
-        //         fontSize: 20,
-        //         color: Colors.black,
+        Expanded(                    
+            child: //ElevatedButton(     //TextButton // OutlinedButton
+            TextButton(
+              onPressed: (){
 
-        //       ),
-        //       ),
-        //     ],
-        //   ),
-        // )
+            },
+              child: Image.asset(
+              'images/dice4.png'
+            ),
+            ),
+                      
+          ),
+          
+          
       ],
+    ),
     );
   }
 }
