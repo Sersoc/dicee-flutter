@@ -1,5 +1,7 @@
-int SwitchDice(){ // i want to express random but didn't know how yet
+import 'dart:math';
+int SwitchDice(){
+  
   int randomNum;
-  randomNum = 5;
+  randomNum = Random().nextInt(6) + 1;
   return randomNum;
 }
